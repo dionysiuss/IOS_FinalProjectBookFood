@@ -21,16 +21,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var userName : String = ""
     var userEmail : String = ""
     var brandName : String = ""
-    var admin : Bool = false
+    var admin : Int = 0
     var ref:DatabaseReference!
     var  orders = [String]()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.Name.text = userName
-        print(self.brandName)
         ref = Database.database().reference().child("order")
         
         ref.observe(.childAdded, with: { (snapshot) in
@@ -51,7 +50,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 }
             })
         })
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,7 +92,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-
+    
+    
     
 }
 
