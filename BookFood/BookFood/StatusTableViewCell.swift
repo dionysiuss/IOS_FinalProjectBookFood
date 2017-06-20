@@ -1,21 +1,17 @@
 //
-//  OrderTableViewCell.swift
+//  StatusTableViewCell.swift
 //  BookFood
 //
-//  Created by jiarou on 2017/6/19.
+//  Created by jiarou on 2017/6/21.
 //  Copyright © 2017年 teamFour. All rights reserved.
 //
 
 import UIKit
 
-class OrderTableViewCell: UITableViewCell {
+class StatusTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var showProductName: UILabel!
     
-    @IBOutlet weak var showProductMoney: UILabel!
-    @IBOutlet weak var showProductNumber: UILabel!
-    
-    
+    @IBOutlet weak var status: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
