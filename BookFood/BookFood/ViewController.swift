@@ -30,7 +30,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.Name.text = userName
-        checkAdmin()
         print(self.brandName)
         ref = Database.database().reference().child("order")
         
@@ -73,14 +72,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }
         }
         
-    }
-    func checkAdmin(){
-        if(self.admin==true){
-            // let backend = segue.destination as! BackendViewController
-            // backend.brandName =self.brandName
-            // let vc = self.storyboard?.instantiateViewController(withIdentifier: "Backend")
-            // self.present(vc!, animated: true, completion: nil)
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
